@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bank Form</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="main-header">Account Application Form</h1>
+        <hr>
+        <form id="app-form" action="">
+            
+                <h2 class="sub-heading">Basic Details</h2>
+                <hr>
+                <label for="dropdown" class="standard-label">
+                    Title
+                    <br>
+                    <select id="dropdown" class="standard-select" required>
+                        <option value="select" disabled selected>Select Title</option>
+                        <option value="Mr">Mr</option>
+                        <option value="Mrs">Mrs</option>
+                    </select>
+                </label>
+                <label for="firstname" class="standard-label">
+                    First Name
+                    <input class="standard-input" name="firstname" id="firstname" type="text"
+                        placeholder="Enter your firstname" required>
+                </label>
+                
+                <label for="lastname" class="standard-label">
+                    Last Name
+                    <input class="standard-input" name="lastname" id="lastname" type="text" placeholder="Enter your lastname"
+                        required>
+                </label>
+                <label for="phone-number" class="standard-label">
+                    Phone Number
+                    <input class="standard-input" type="tel" id="phone" name="phone" pattern='^\+?\d{10,12}'
+                        placeholder="Enter your mob No" required>
+                </label>
+                <label for="email-address" class="standard-label">
+                    Email<span class="required">*</span>
+                    <input class="standard-input" id="email-address" type="email" placeholder="Enter your email"
+                    pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$"
+                        required>
+                </label>
+                <label for="DOB" class="standard-label">
+                    Date of Birth
+                    <input class="standard-input" type="date" name="DOB" id="DOB" required>
+                </label>
+                
+                    <br>
+                    <select id="account-select" class="standard-select" required>
+                        <option value="select" disabled selected>Select Account</option>
+                        <option value="basic-current">Students Account</option>
+                        <option value="instant-saver">Savings Account</option>
+ 
+                    </select>
+
+                    <select id="select card" class="standard-select" required>
+                        <option value="select" disabled selected>Choose card</option>
+                        <option value="Debit-card">Debit card</option>
+                        <option value="Credit-card">Credit card</option>
+                    
+                    </select>
+                </label>
+                <button type="button" id="show-address">next</button>
+                
+                <hr>
+
+                <div id="current-address">
+                    <h3 class="small-heading">Current Address</h3>
+                    <label for="line1" class="standard-label">
+                        Address line 
+                        <input class="standard-input" type="text" required>
+                    </label>
+                    
+                    <label for="city" class="standard-label">
+                        City
+                        <input class="standard-input" type="text" required>
+                    </label>
+                    <label for="State" class="standard-label">
+                        State
+                        <input class="standard-input" type="text">
+                    </label>
+                    <label for="country" class="standard-label">
+                        Country
+                        <input class="standard-input" type="text">
+                    </label>
+                    <label for="pincode" class="standard-label">
+                        Pin Code<span class="required">*</span>
+                        <input class="standard-input" type="text" maxlength="8" required>
+                    </label>
+                    
+                </div>
+                <div id="previous-address">
+                    <h3 class="small-heading">Previous Address</h3>
+                    <label for="line1" class="standard-label">
+                        Address line 
+                        <input class="standard-input" type="text">
+                    </label>
+                    
+                    <label for="city" class="standard-label">
+                        City
+                        <input class="standard-input" type="text">
+                    </label>
+                    <label for="State" class="standard-label">
+                        State
+                        <input class="standard-input" type="text">
+                    </label>
+                    <label for="country" class="standard-label">
+                        Country
+                        <input class="standard-input" type="text">
+                    </label>
+                    <label for="pincode" class="standard-label">
+                        Pin Code<span class="required">*</span>
+                        <input class="standard-input" type="text" maxlength="8">
+                    </label>
+                </div>
+                <button type="button" id="get-consent">Next</button>
+                <input id="submit-app" type="submit" name="submit" value="Submit Application" onclick="logValues()">
+            
+        </form>
+    </div>
+</body>
+
+</html>
